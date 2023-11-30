@@ -29,9 +29,21 @@ for i in transcript:
 #print(result)
 print(len(result))
 
+#Preprocessing of Text
+import nltk
+nltk.download("punkt")
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+from nltk.tokenize import word_tokenize
+text = result
+text_tokens = word_tokenize(text)
+tokens_without_sw = [word for word in text_tokens if not word in stopwords.words()]
+print("Tokens without stopwords:",tokens_without_sw)
+print("Stopwords are:",stopwords.words('english'))
+
 summarizer = pipeline('summarization')
 
-# Preprocessing of Text.
+# Summarization of Text.
 num_iters = int(len(result)/1000)
 summarized_text = []
 for i in range(0, num_iters + 1):
