@@ -1,5 +1,6 @@
 # Youtube-Video-Transcript-Summarization
 A Minor Project build based on Natural Language Processing.
+Coding Language is Python.
 It is done by using basic steps:
 1. Conversion of a Video File into an Audio File.
 2. Conversion of Audio File into a Text File.
